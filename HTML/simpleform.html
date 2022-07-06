@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SimpleForm</title>
+        <style>
+            .wufoo {
+                font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+       <form method="get" action="simpleform.html">
+            <h2>Oder Form</h2>
+            <p>What would you like to By?</p>
+            <select>
+                <option value="">A</option>
+                <option>B (+ 0.5 $)</option>
+                <option>C (+ 0.5 $)</option>
+            </select>
+            <p>How many would you like to oder</p>
+                <input type="radio" name="rd"> 1 - 10$ <br>
+                <input type="radio" name="rd"> 2 - 20$ <br>
+                <input type="radio" name="rd"> 3 - 25$ <br>
+            <p>Name <span style="color: red;">*</span></p>
+                <input type="text" name="Firstname" placeholder="FirstName" size="15px">
+                <input type="text" name="Lastname" placeholder="LastName" size="15px">
+            <p>Email</p>
+                <input type="text" name="email" placeholder="exname@gmail.com" size="35px">
+            <p>Phone Number</p>
+                <input type="text" name="phone 1" size="5"> -                
+                <input type="text" name="phone 2" size="5"> -
+                <input type="text" name="phone 3" size="5">
+            <p>
+                <input type="button" name="btSubmit" value="Submit">
+            </p>  
+       </form>
+    </body>
+</html>
