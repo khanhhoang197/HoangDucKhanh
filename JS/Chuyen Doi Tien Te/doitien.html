@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th><label for="tien"> Nhập số tiền muốn đổi</label></th>
+            <th>Từ Đồng</th>
+            <th>Sang Đồng</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="text" id="tien"></td>
+            <td>
+                <select id="from">
+                    <option value="VNĐ">VNĐ</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="to">
+                    <option value="VNĐ">VNĐ</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="doitien()"> Click để đổi </button>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <p id="doi"></p>
+</body>
+<script src="doitien.js"></script>
+</html>
