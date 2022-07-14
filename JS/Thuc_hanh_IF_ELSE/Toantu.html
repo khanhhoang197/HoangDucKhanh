@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập với toán tử ba ngôi</title>
+</head>
+<body>
+<!-- Bài 1 
+    <script>
+        let a = +prompt('Nhập a: ');
+        let b = +prompt('Nhập b: ');
+        let result = a + b ;
+        if (result < 4) {
+            alert('Below');
+        }else{
+            alert('Over');
+        }
+
+    </script>
+-->
+<!-- Bài 2 
+    <script>
+        let message = prompt('Nhập vào giá trị cho chuỗi: ');
+        if (message == 'Employee') {
+            alert('Hello');
+            
+        }else if(message == 'Director'){
+            alert('Greetings');
+        }else if(message ==''){
+            alert('No login');
+        }else{
+            alert('chuỗi rỗng');
+        }
+    </script>
+-->
+    <script>
+        let login = prompt("Enter:");
+        let message = (login == 'Employee') ?
+            'Hello' :
+        (login == 'Director') ?
+            'Greetings' :
+        (login == '') ?
+            'No login' :
+                '';
+        alert(message);
+    </script>
+</body>
+</html>
