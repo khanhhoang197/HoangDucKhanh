@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính chỉ số cân nặng</title>
+</head>
+<body>
+    <h1>TÍNH CHỈ SỐ CÂN NẶNG</h1>
+ 
+        <label for="weight"> Nhập chiều cao (m)</label>
+        <td><input type="number" id="height">
+    <br>
+    <br>
+        <label for="height"> Nhập cân nặng (kg)</label>
+        <input type="number" id="weight">            
+    <br>
+    <br>
+    <button onclick = "Ktra()">Kiểm Tra</button>
+    <br>
+    <p id="result"></p>
+</body>
+    <script>
+        function Ktra() {
+            let height = document.getElementById("height").value; 
+            let weight = document.getElementById("weight").value;     
+            let bmi = weight / (height**2);
+            let result = '';
+            if (bmi < 18)
+                result = "underweight"
+            else if (bmi <= 25)
+                result = "Normal";
+            else if (bmi < 30)
+                result = "Overweight";
+            else if(bmi >= 30)
+                result = "Obese";
+            document.getElementById("result").innerHTML = "Chỉ số BMI là: " + bmi + ". Bạn " + "<b>"+ result + "</b>";
+
+        }
+    </script>
+</html>
