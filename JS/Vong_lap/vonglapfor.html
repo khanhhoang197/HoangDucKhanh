@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng vòng lặp For</title>
+</head>
+<body>
+<!-- Bài 1 
+        <h1>Viết chương trình hiển thị chuỗi “The number is N” 5 lần sử dụng vòng lặp for. Với N sẽ hiển thị từ 0 đến 5.</h1>
+        <p id="view"></p>
+    <script>
+        let text = '';
+        for(let i = 0; i < 5; i++){
+             text += 'The number is ' + i + '<br>';
+        }
+       
+        document.getElementById('view').innerHTML = text;
+    </script>
+-->
+<!-- Bài 2 Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa nhập vào.-->
+        <script>
+            let num = prompt('Nhập vào 1 số bất kỳ lớn hơn 0');
+            let total = 0;
+            for (let i = 1; i <= num; i++){
+                total = total + i;
+            }
+            alert(total);
+        </script>
+</body>
+</html>
