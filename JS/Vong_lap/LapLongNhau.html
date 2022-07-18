@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng vòng lặp lồng nhau</title>
+</head>
+<body>
+    <!-- bài tập: Chương trình hiển thị bảng -->
+    <script>
+        let bang, i, j;
+            bang = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+            i = j = 1;
+        while (i <= 10) {
+            bang = bang + "<tr>";
+            while (j <= 10) {
+                bang = bang + "<td>" + i * j + "</td>";
+                j++;
+            }
+            bang = bang + "</tr>";
+            j = 1;
+            i++;
+        }
+        bang = bang + "</table>";
+        document.write(bang);
+    </script>
+</body>
+</html>
