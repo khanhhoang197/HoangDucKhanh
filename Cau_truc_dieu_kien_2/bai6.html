@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 6</title>
+</head>
+<body>
+    <!-- Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng -->
+    <script>
+        let doanhso, hoahong;
+        doanhso = prompt('nhập vào doanh số bán hàng: ');
+        if (doanhso >= 100) {
+            hoahong = doanhso*10/100;
+            document.write('hoa hồng của bạn là: ' + hoahong);
+        }else if (doanhso >= 50) {
+            hoahong = doanhso*7/100;
+            document.write('Hoa hồng của bạn là: ' + hoahong);
+        } else if (doanhso < 50 && doanhso >= 25) {
+            hoahong = doanhso*5/100;
+            document.write('Hoa hồng của bạn là: ' + hoahong);
+        } else if (doanhso < 25) {
+            document.write('Bạn không có hoa hồng!')
+        }
+    </script>
+</body>
+</html>

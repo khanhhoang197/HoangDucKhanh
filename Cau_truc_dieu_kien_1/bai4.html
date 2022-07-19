@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 4</title>
+</head>
+<body>
+    <!-- bài 4:  Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó -->
+    <script>
+        let a , b , c;
+        a = prompt('Nhập vào số nguyên thứ nhất: ');
+        b = prompt('Nhập vào số nguyên thứ hai: ');
+        c = prompt('Nhập vào số nguyên thứ ba: ');
+        if (a>b && a>c) {
+            document.write(a + ' là số lớn nhất.');            
+        }else if (a<b && a>c) {
+            document.write(b + ' là số lớn nhất.');
+        }
+        else if (a<b && b<c) {
+            document.write(c + ' là số lớn nhất.');
+        
+        }else if (a=b=c) {
+            document.write('3 số bằng nhau.');
+        }
+
+    </script>
+</body>
+</html>
