@@ -4,18 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bai 3</title>
+    <title>bài 3</title>
+    <style>
+        input{
+            width: 400px;
+        }
+    </style>
 </head>
 <body>
-    <!-- bai 3:  Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0 -->
-    <script>
-        let a;
-        a = prompt('nhập vào 1 số: ');
-        if (a>0) {
-            document.write('số ' + a + ' lớn hơn 0');
-        }else if (a<0) {
-            document.write('số ' + a + ' bé hơn 0');
-        }
-    </script>
+    <!-- bài 3: Tính diện tích hình vuông khi biết cạnh a. -->
+    <table>
+        <tr>
+            <td><label for="a">Nhập cạnh hình vuông: </label></td>
+            <td><input type="number" name="" id="a"></td>
+        </tr>
+        <tr>
+            <td><label for="s">Kết quả:</label></td>
+            <td><input type="text" readonly id="kq" ></td>
+        </tr>
+        <tr>    
+            <td></td>
+            <td><button onclick="check()"> Kết quả</button>
+                <button type="reset" onclick="reset()">Reset</button>
+                </td>
+        
+        </tr>
+        
+    </table>
 </body>
+        <script>
+            function check(){
+                let a = Number(document.getElementById('a').value);
+                let kq = document.getElementById('kq');
+                if (a > 0) {
+                    let s = a * a;
+                    kq.value = `Diện tích hình vuông có cạnh ${a} là ${s}`;
+                }else{
+                    kq.value = 'Vui lòng nhập cạnh hình vuông là 1 số dương!'
+                }
+            }
+            function reset() { 
+                Number(document.getElementById('a').value = null);
+                document.getElementById('kq').value = null;
+            }
+        </script>
 </html>

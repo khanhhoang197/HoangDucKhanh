@@ -4,18 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bài 2</title>
+    <title>bai 2</title>
+    <style>
+        input{
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
-    <!-- bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10. -->
-    <script>
-        let agre;
-        agre = prompt('nhập số tuổi: ');
-        if (agre != 15 ) {
-            document.write('Bạn không đủ điều kiện vào lớp 10');
-        } else if (agre = 15){
-            document.write('Bạn  đủ điều kiện vào lớp 10');
-        }
-    </script>
+    <!-- Chuyển từ mét sang feet: -->
+    <table>
+    <tr>
+        <td><label for="m">Nhập số mét cần chuyển đổi:</label></td>
+        <td><input type="number" name="" id="m"></td>
+    </tr>
+    <tr>
+        <td><label for="f">Kết quả:</label></td>
+        <td><input type="text" readonly id="kq" ></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button onclick="check()"> Chuyển đổi</button></td>
+    </tr>
+    
+</table>
 </body>
+        <script>
+
+            function check(){
+                let m = Number(document.getElementById('m').value);
+                if ( m >= 0){               
+                 let f = m * 3.2808;
+                let kq = document.getElementById('kq');
+                kq.value = `${m} mét sẽ là ${f} feet`;
+                }else{
+                    kq.value = 'Vui lòng nhập số dương!'
+                }
+            }
+        </script>
 </html>
