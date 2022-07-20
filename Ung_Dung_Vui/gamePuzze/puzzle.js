@@ -18,4 +18,4 @@ function changeImage(row){
     else{
         document.getElementsByTagName("table")[0].classList.remove('completed');
     }
-}
+} 
