@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+    <style>
+        input{
+            width:  200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bài 6: Giải phương trình bậc 1. -->
+    <table>
+        <h1>Giải phương trình bậc 1 ax + b = 0</h1>
+        <tr>
+            <td><label for="a">Nhập a </label></td>
+            <td><input type="number" id="a"></td>
+        </tr>
+        <tr>
+            <td><label for="b">Nhập b </label></td>
+            <td><input type="number" id="b"></td>
+        </tr>
+        <tr>
+            <td>Kết quả: 'x' </td>
+            <td><input type="text" readonly id="kq"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="button" onclick="check()"> Kết quả</button>
+                <button type="reset" onclick="reset()">Reset</button>
+            </td>
+        </tr>
+    </table>
+</body>
+            <script>
+                function check() {
+                    let a = Number(document.getElementById('a').value);
+                    let b = Number(document.getElementById('b').value);
+                    let kq = document.getElementById('kq');
+                    if (a == 0 && b == 0) {
+                        kq.value = 'X có vô số nghiệm';
+                    }else if (a == 0 && b > 0) {
+                        kq.value = 'Phương trình vô nghiệm';
+                    }else if(a != 0 && b != 0){
+                        let x = (-b)/a; 
+                        kq.value = `Phương trình có nghiệm là: ${x}`;
+                    }
+                    
+                }     
+                function reset(){
+                a = document.getElementById('a').value = null;
+                b = document.getElementById('b').value = null;
+                kq = document.getElementById('kq').value = null;
+
+            }        
+            </script>
+</html>
