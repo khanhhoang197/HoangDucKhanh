@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 1</title>
+    <style>
+               input{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bài 1: Chuyển từ độ C sang độ F. -->
+    <table>
+        <tr>
+            <td><label for="c">Nhập số độ C cần chuyển đổi:</label></td>
+            <td><input type="number" name="" id="c"></td>
+        </tr>
+        <tr>
+            <td><label for="f">Kết quả:</label></td>
+            <td><input type="text" readonly id="kq" ></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="check()"> Chuyển đổi</button></td>
+        </tr>
+        
+    </table>
+    <script>
+        function check() {
+            let kq = document.getElementById('kq')
+            let c = Number(document.getElementById('c').value) ;
+            let f = c * 9/5 + 32
+            kq.value = (`${c} độ C sẽ là ${f} độ F`);
+        }
+    </script>
+</body>
+</html>
