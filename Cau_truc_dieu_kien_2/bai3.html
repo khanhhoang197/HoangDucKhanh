@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,4 +49,56 @@
                 document.getElementById('kq').value = null;
             }
         </script>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 3</title>
+    <style>
+        input{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- bài 3: Tính diện tích hình vuông khi biết cạnh a. -->
+    <table>
+        <tr>
+            <td><label for="a">Nhập cạnh hình vuông: </label></td>
+            <td><input type="number" name="" id="a"></td>
+        </tr>
+        <tr>
+            <td><label for="s">Kết quả:</label></td>
+            <td><input type="text" readonly id="kq" ></td>
+        </tr>
+        <tr>    
+            <td></td>
+            <td><button onclick="check()"> Kết quả</button>
+                <button type="reset" onclick="reset()">Reset</button>
+                </td>
+        
+        </tr>
+        
+    </table>
+</body>
+        <script>
+            function check(){
+                let a = Number(document.getElementById('a').value);
+                let kq = document.getElementById('kq');
+                if (a > 0) {
+                    let s = a * a;
+                    kq.value = `Diện tích hình vuông có cạnh ${a} là ${s}`;
+                }else{
+                    kq.value = 'Vui lòng nhập cạnh hình vuông là 1 số dương!'
+                }
+            }
+            function reset() { 
+                Number(document.getElementById('a').value = null);
+                document.getElementById('kq').value = null;
+            }
+        </script>
+>>>>>>> 01ea9b880e99b114975045be78da970510cbdab6
 </html>

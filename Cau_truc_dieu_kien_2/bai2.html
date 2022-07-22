@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,4 +43,50 @@
                 }
             }
         </script>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 2</title>
+    <style>
+        input{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Chuyển từ mét sang feet: -->
+    <table>
+    <tr>
+        <td><label for="m">Nhập số mét cần chuyển đổi:</label></td>
+        <td><input type="number" name="" id="m"></td>
+    </tr>
+    <tr>
+        <td><label for="f">Kết quả:</label></td>
+        <td><input type="text" readonly id="kq" ></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button onclick="check()"> Chuyển đổi</button></td>
+    </tr>
+    
+</table>
+</body>
+        <script>
+
+            function check(){
+                let m = Number(document.getElementById('m').value);
+                if ( m >= 0){               
+                 let f = m * 3.2808;
+                let kq = document.getElementById('kq');
+                kq.value = `${m} mét sẽ là ${f} feet`;
+                }else{
+                    kq.value = 'Vui lòng nhập số dương!'
+                }
+            }
+        </script>
+>>>>>>> 01ea9b880e99b114975045be78da970510cbdab6
 </html>

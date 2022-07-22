@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,4 +57,64 @@
 
             }        
         </script>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 4</title>
+    <style>
+        input{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b. -->
+    <table>
+        <h1>Tính diện tích hình  chữ nhật</h1>
+        <tr>
+            <td><label for="a">Nhập chiều dài:  </label></td>
+            <td><input type="number" id="a"></td>
+        </tr>
+        <tr>
+            <td><label for="b">Nhập chiều rộng: </label></td>
+            <td><input type="number" id="b"></td>
+        </tr>
+        <tr>
+            <td>Kết quả:</td>
+            <td><input type="text" readonly id="kq"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="button" onclick="check()"> Kết quả</button>
+                <button type="reset" onclick="reset()">Reset</button>
+            </td>
+        </tr>
+    </table>
+</body>
+        <script>
+            function check(){
+                let a = Number(document.getElementById('a').value);
+                let b = Number(document.getElementById('b').value);
+                let kq = document.getElementById('kq');
+                if (a > 0 && b>0) {
+                    let s = a * b ;
+                    kq.value = `Diện tích hình chữ nhật là: ${s}`;
+                }
+                else{
+                    kq.value = 'Độ dài cạnh là 1 số nguyên dương!';
+                }
+            }    
+            function reset(){
+                a = document.getElementById('a').value = null;
+                b = document.getElementById('b').value = null;
+                kq = document.getElementById('kq').value = null;
+
+            }        
+        </script>
+>>>>>>> 01ea9b880e99b114975045be78da970510cbdab6
 </html>
