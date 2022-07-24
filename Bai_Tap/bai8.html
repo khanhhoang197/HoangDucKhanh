@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8: trò chơi</title>
+    <style>
+        button{
+            width: 100px;
+            height: 40px;
+            border: solid 3px orange;
+            border-radius: 15%; 
+            color: red;
+            scrollbar-shadow-color: orange 35%;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align:center ; padding-top: 300px;">
+        <button onclick="doanso()">Chơi</button>
+    </div>
+    <script>
+         function doanso() {
+            let phamvi = Number(prompt("Trò chơi đoán số từ 0 đến: "));
+            let nhapso = Number(prompt("Nhập vào số muốn đoán"));
+            let soRamdom;
+            if(phamvi){
+                soRamdom = Math.floor(Math.random()*phamvi);
+                if(soRamdom == nhapso){
+                    alert("Chúc mừng bạn đã đoán đúng!");
+                }else if(soRamdom > nhapso){
+                        alert('Bạn đoán sai số, số đúng sẽ lớn hơn số bạn chọn!');
+                        nhapso = Number(prompt("Mời bạn đoán lại!"));
+                }else if(soRamdom < nhapso){
+                        alert('Bạn đoán sai sô, sô đúng sẽ nhỏ hơn số bạn đoán');
+                        nhapso = Number(prompt("Mời bạn đoán lại!"));
+                    }
+                
+                }
+         }
+         
+    </script>
+    
+</body>
+</html>
