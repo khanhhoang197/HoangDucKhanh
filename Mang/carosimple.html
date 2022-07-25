@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taoh bàn cờ caro đơn giản</title>
+</head>
+<body >
+    <h2>Game caro</h2>
+    <p id="caro"></p>
+    <input type="button" value="Thay Đổi" onclick="changer()">
+
+    <script>
+        let co = document.getElementById("caro");
+        let banco = [];
+        let data = "";
+
+        for (let i = 0; i < 5; i++){
+            banco[i] = new Array(0,0,0,0,0);
+        }
+
+        for(let i = 0; i < banco.length; i++){
+            data += "<br>";
+            for (let j = 0; j < banco[i].length; j++){
+                data += banco[i][j] + " ";
+            }
+        }
+        co.innerHTML  = data;
+        
+        function changer() {
+            let dong, cot
+            dong = Number(prompt("Nhập dòng thay đổi") - 1);
+            cot = Number(prompt("Nhập cột thay đổi") - 1);
+            data = "";
+            banco[dong][cot] = "X";
+            for (let i=0;i<banco.length;i++){
+                data += "<br>";
+                for (let j = 0; j < banco[i].length; j++){
+                    data += banco[i][j] + " ";
+                }
+            }
+            co.innerHTML = data;
+        }
+    </script>
+</body>
+</html>
