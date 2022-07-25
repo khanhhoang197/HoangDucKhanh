@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 250px;
+            height: 80%;
+        }
+        td{
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label for="">Nhập vào kích cỡ của mảng: </label></td>
+            <td><input type="number" id="size"></td>
+        </tr>
+        <tr>
+            <td><label for="">Nhập vào giá trị nhỏ nhất (MIN): </label></td>
+            <td><input type="number" id="smin"></td>
+        </tr>
+        <tr>
+            <td><label for="">Nhập vào giá trị lớn nhất (MAX): </label></td>
+            <td><input type="number" id="smax"></td>
+        </tr>
+        <tr>
+            <td><label for="">Mảng của bạn là: </label></td>
+            <td><input type="text" readonly id="arr"></td>
+        </tr>
+        <tr>
+            <td><label for="">Tổng các giá trị trong mảng là: </label></td>
+            <td><input type="text" readonly id="tong"></td>
+        </tr>
+        <tr>
+            <td><label for="">Giá trị lớn nhất trong mảng là: </label></td>
+            <td><input type="text" readonly id="gtlonnhat"></td>
+        </tr>
+        <tr>
+            <td><label for="">Số lượng các số chẵn có trong mảng là: </label></td>
+            <td><input type="text" readonly id="sochan"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center ;"><button type="button" onclick="click()" >Kết quả</button></td>
+        </tr>
+    </table>
+    <script>
+        // thiết kế chương trình để thực hiện nhiệm vụ sau:
+        // 1. Ô để nhập vào kích cỡ
+        // 2. Ô để nhập giá trị min
+        // 3. Ô để nhập giá trị max
+        // 4. Ô để hiển thị mảng
+        // 5. Ô để hiển thị tổng các giá trị có trong mảng
+        // 6. Ô để hiển thị giá trị lớn nhất trong mảng
+        // 7. Ô để hiển thị số lượng các số chẵn có trong mảng
+        // 8. Có 1 button, khi click vào button này thì sẽ xử lý và trả kết quả vào trong các ô từ 4 đến 7
+        // Khi bấn vào nút button thì sẽ tạo ra 1 mảng có kích cỡ là size và các giá trị được sinh ngẫu nhiên trong [min, max]
+        // sau đó xử lý để hiển thị vào các ô từ 4 đến 7
+        function click(){
+            let size = Number( prompt(document.getElementById('size').value)),
+                min = Number(prompt(document.getElementById('smin').value)),
+                max = Number(prompt(document.getElementById('smax').value)),            
+                arr = document.getElementById('arr'),
+                tong = document.getElementById('tong'),
+                GTL =  document.getElementById('gtlonnhat'),
+                sochan = document.getElementById('sochan');
+            let numbers = new Array(size);
+            for(i = 0; i < numbers.length; i++){
+                numbers[i] = Math.floor(Math.random() * (max - min + 1));
+                arr.value = `mang[${numbers[i]},] `;
+                let tong1 = [i] + [i - 1];
+                tong.value = `${tong1}`;
+            }
+            
+            
+
+        }
+
+    </script>
+</body>
+</html>

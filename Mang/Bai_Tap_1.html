@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let size = Number(prompt('Nhập vào số phần tử trong mảng'));
+        let numbers = new Array (size);
+        const min = 5;
+        const max = 10;
+        for(i = 0; i < numbers.length; i++){
+            numbers[i] = Math.floor(Math.random() * (max - min + 1) + min);
+            document.write(`${numbers[i]}, `);
+        }
+    </script>
+</body>
+</html>
