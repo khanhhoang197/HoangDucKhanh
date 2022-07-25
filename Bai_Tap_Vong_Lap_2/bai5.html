@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</title>
+</head>
+<body>
+    <!-- Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng. -->
+    <script>
+        let sotien = Number(prompt("Nhập số tiền gửi ngân hàng lãi suất 5%/năm"));
+        let sothang = Number(prompt("Nhập số tháng gửi"));
+        let tienlai_thang = 0;
+        let tongtienlai = tienlai_thang;
+        document.write(`Số tiền bạn gửi là ${sotien} VNĐ trong ${sothang} tháng với lãi suất 5%/ năm <br>`);
+        for (let i = 0; i < sothang; i++){
+            tienlai_thang = ((sotien*5)/100)/12;
+            tongtienlai += tienlai_thang;
+            sotien += tienlai_thang;
+            document.write(`Tiền lãi tháng ${i+1} là ${tienlai_thang.toFixed(0)} VNĐ<br>`);
+        }
+        document.write(`Tổng tiền lãi của bạn trong ${sothang} là ${tongtienlai.toFixed(0)} VNĐ`)
+    </script>
+</body>
+</html>

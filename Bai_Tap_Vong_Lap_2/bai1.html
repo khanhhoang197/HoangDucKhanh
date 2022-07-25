@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1: in dãy Fibonari</title>
+</head>
+<body>
+    <script>
+        const number = parseInt(prompt('Nhập số lần hiển thị: '));
+            let F = 0, F1 = 1, F2;
+                for (let i = 1; i <= number; i++) {
+                document.write(`${F}, `);
+                F2 = F + F1;
+                F = F1;
+                F1 = F2;
+                }
+            document.write('Dãy Fibonacci của bạn là:');
+     </script>
+</body>
+</html>
