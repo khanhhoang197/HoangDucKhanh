@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển</title>
+</head>
+<body>
+    <div style="text-align:center ; padding-top: 80px;">
+
+            <label for="timkiem"><input type="text" style="width: 250px; height: 25px; border-radius: 15px; text-align: center;" id="timkiem"></label>
+            <button onclick="searcha()" style="height: 30px; border-radius: 15px; width: 80px;">Search</button>
+
+        <p id="result"></p>
+    </div>
+        
+    <script>
+        function searcha() {
+            let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+            let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+            let timkiem = document.getElementById("timkiem").value;
+            let index_eng = 0;
+            let result = "";
+            for (let i = 0; i < arr_eng.length; i++) {
+                if (timkiem == arr_eng[i]) {
+                    index_eng = i;
+                    for (let j = 0; j < arr_vie.length; j++) {
+                        if (index_eng == j) { 
+                            result = arr_vie[j]; 
+                        }
+                    }
+                }
+            }
+            for (let i = 0; i < arr_vie.length; i++) {
+                if (timkiem == arr_vie[i]) {
+                    index_eng = i;
+                    for (let j = 0; j < arr_eng.length; j++) {
+                        if (index_eng == j) { 
+                            result = arr_eng[j]; 
+                        }
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
