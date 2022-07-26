@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <h2>Caro game simple</h2>
+    <p id="carogame"></p>
+    <input type="button" value="Change Value" onclick="ChangeValue()">
+    <script>
+        let b = document.getElementById('carogame');
+        let data = '';
+        let board = [];
+        let h = 1;
+
+        //Add các phần tử vào mảng hai chiều
+        for (let i = 0; i < 5; i++){
+            board[i] = new Array('(.)','(.)','(.)','(.)','(.)');
+        }
+
+        //Xử lý hiển thị ban đầu
+        for(let i = 0; i < 5; i++){
+            data += '<br>';
+            for (let j = 0; j < 5; j++){
+                data += board[i][j] + '&ensp;';
+            }
+        }
+        b.innerHTML = data;
+
+        //Sự kiện khi clink vào button change value
+
+        function ChangeValue() {
+            data = '';
+            let positionX = parseInt(prompt("Enter the position of x"));
+            let positionY = parseInt(prompt("Enter the position of y"));
+            if(h % 2 == 0){
+                board[positionX][positionY] = 'X';
+            }else {
+                board[positionX][positionY] = 'O';
+            }
+            h++;
+            for (let i = 0; i<5; i++){
+                data += '<br>';
+                for (let j = 0; j<5; j++){
+                    data += board[i][j] + '&ensp;' + '&ensp;' + '&ensp;';
+                }
+            }
+            b.innerHTML = data;
+
+            //Xử lý x hay o thắng
+            for(let i=0; i<5; i++){
+                for (let j=0; j<5; j++){
+                    if (board[i][j] === 'X' && board[i][j+1] === 'X' && board[i][j+2] === 'X' ||
+                        board[i][j] === 'X' && board[i+1][j] === 'X' && board[i+2][j] === 'X'){
+                        alert("X Thắng");
+                          
+                    }else if(board[i][j] === 'O' && board[i][j+1] === 'O' && board[i][j+2] === 'O' ||
+                             board[i][j] === 'O' && board[i+1][j] === 'O' && board[i+2][j] === 'O'){
+                        alert("O Thắng");
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
