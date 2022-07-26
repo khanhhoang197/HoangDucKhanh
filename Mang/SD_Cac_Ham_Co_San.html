@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SỬ DỤNG CÁC HÀM CÓ SẴN</title>
+</head>
+<body>
+    <br><br>
+    <button onclick="bai1()" value="Bài 1">Bài 1</button>  Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với nhau. <br><br><br>
+    <button onclick="bai2()" value="Bài 2">Bài 2</button>  Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn. <br><br><br>
+    <button onclick="bai3()" value="Bài 3">Bài 3</button>  Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa.
+
+    <script>
+        function bai1(){
+            let mycolor = ["Red", "Green", "White", "Black"];
+            document.write(`"${mycolor.toString()}"`);
+        }
+
+        function bai2(){
+            var num=window.prompt();
+            var str = num.toString();
+            var result = [str[0]];
+            
+            for(var x=1; x<str.length; x++)
+            {
+                if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+                {
+                result.push('-', str[x]);
+                }
+                else
+                {
+                result.push(str[x]);
+                }
+            }
+            document.write(result.join(''));
+        }
+        
+        function bai3(){
+            str = prompt('Nhập vào một chuỗi ký tự: ');
+            var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+            var result = [];
+            
+            for(var x=0; x<str.length; x++)
+            {
+                if(UPPER.indexOf(str[x]) !== -1)
+                {
+                result.push(str[x].toLowerCase());
+                }
+                else if(LOWER.indexOf(str[x]) !== -1)
+                {
+                result.push(str[x].toUpperCase());
+                }
+                else 
+                {
+                result.push(str[x]);
+                }
+            }
+            document.write(result.join(''));
+        }
+    </script>
+</body>
+</html>
