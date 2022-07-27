@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập mảng</title>
+</head>
+<body>
+    <button onclick="bai_1()">Bài 1: </button> Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.<br><br><br>
+    <button onclick="bai_2()">Bài 2: </button>  Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.<br><br><br>
+    <button onclick="bai_3()">Bài 3: </button> Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.<br><br><br>
+    <button onclick="bai_4()">Bài 4: </button> Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.<br><br><br>
+    <button onclick="bai_5()">Bài 5: </button> Viết chương trình đếm số nguyên âm trong một chuỗi<br><br><br>
+    <button onclick="bai_6()">Bài 6: </button> Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".<br><br><br><br>
+    <button onclick="bai_7()">Bài 7: </button> Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)<br><br><br><br>
+    <button onclick="bai_8()">Bài 8: </button>  Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.<br><br><br>
+    <a href="bai9.html"><button> Bài 9: </button></a> Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.<br><br><br>
+</body>
+    <script>
+        let size = 10;
+        let num = new Array(size);
+
+        function mang(){
+            let min = 1;
+            let max = 20;
+            for(let i = 0; i < size; i++){
+                num[i] = Math.floor(Math.random() * (max - min + 1) + min);
+            }
+            document.write(`Mảng khởi tạo array = [${num}]`);
+
+           return num;
+        }
+        function bai_1(){
+            num = mang();
+            let total = 0;
+            for(let i = 0; i < num.length; i++ ){
+                if(num[i] >= 10){
+                    total ++;
+                }
+            }
+            document.write(`<br> Số phần tử lớn hơn hoặc bằng 10 có: ${total} phần tử`);
+        }
+
+        function bai_2(){
+            mang();
+            let valuemax = 0;
+            let index;
+            for (let i = 0; i < num.length; i++) {
+                if (num[i] > valuemax) {
+                    valuemax = num[i];
+                    index = i;
+                }
+            }
+            document.write(`<br> Phần tử có giá trị lớn nhất là: ${valuemax}, tại vị trí ${index}`);
+        }
+
+        function bai_3(){
+            mang();
+            let valuemax = 0;
+            let average = 0;
+            for (let i = 0; i < num.length; i++) {
+                average += num[i];
+
+                if (num[i] > valuemax) {
+                    valuemax = num[i];
+                    index = i;
+                }
+            }
+            document.write(`<br> Phần tử có giá trị lớn nhất là: ${valuemax}, giá trị trung bình là: ${average/size}`);
+        }
+
+        function bai_4(){
+            mang();
+            let result;
+            for(i = 0; i < (size/2); i ++){
+                    result = num[i];
+                    num[i] = num[size-i-1]; 
+                    num[size-i-1] = result;            
+            }
+            document.write(`<br> Mảng sau khi đảo: array = [${num}]`);           
+        }
+        
+        // function bai_4(){
+        //     mang();
+        //     let result;
+        //     for(i = 0; i <= size; i ++){
+        //         if(i<size/2){
+        //             result = num[i];
+        //             num[i] = num[size-i-1]; 
+        //             num[size-i-1] = result;         
+        //         }
+        //     }
+        //     document.write(`<br> [${num}]`)           
+        // }
+
+        function bai_5(){
+            let min = -10, max = 10, total = 0;
+            for(let i = 0; i < num.length; i++){
+                num[i] = Math.floor(Math.random()*(max - min + 1) + min);
+            }
+            document.write(`Mảng khởi tạo array = [${num}]`);
+            for(let j = 0; j < num.length; j++){
+                if(num[j] < 0){
+                     total++;
+                }
+            }
+            document.write(`<br> Có ${total} số nguyên âm.`);
+        }
+
+        function bai_6(){
+            mang();            
+            document.write('<br><br><button id="search" onclick="search()">Search</button><br>');
+          
+        }
+        function search(){
+            
+            let count = 0;
+            let V = prompt('Nhập phần tử số nguyên V để kiểm tra!');
+            for( let i = 0; i < num.length; i ++){
+                if(num[i] == V){
+                    count ++;                
+                }
+            }if( count !== 0){
+                    document.write(`<br> ${V} is in the array`);
+            }else{
+                    document.write(`<br> ${V} is not in the array`);
+            }
+        }
+        
+        function bai_7(){
+            mang();
+            document.write('<br><br><button onclick="search_delete()">Search</button><br>');
+
+        }
+        function search_delete(){
+            let V = Number(prompt('Nhập vào số nguyên V để kiểm tra!'));
+            for(let i = 0; i < num.length; i++){
+                while (V == num[i])  {
+                    
+                    num.splice(i, 1); 
+                    num.push("0");
+
+                }                                      
+            }
+            document.write(`Đã xóa ${V} khỏi mảng. `);           
+            document.write(`<br> Mảng sau khi đảo: array = [${num}]`);           
+
+
+        }
+        
+        function bai_8(){
+            mang();
+            document.write(`<br><br>Mảng sau khi sắp xếp là: array = [${num.sort(function(n1,n2){return n1-n2})}]`);
+        }
+
+    </script>
+</html>
