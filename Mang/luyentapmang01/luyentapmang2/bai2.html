@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+<body>
+    <script>
+        let arr = ['c', 's', 'c', '2', '6', '1'];
+        let first = 0;
+        let last = arr.length - 1;
+        while (first < last) {
+            let b = arr[first];
+                arr[first] = arr[last];
+                arr[last] = b;
+            first++;
+            last--;
+        }
+        document.write(arr);
+       
+    </script>
+</body>
+</html>

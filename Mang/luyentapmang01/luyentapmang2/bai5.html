@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5 </title>
+</head>
+<body>
+    <script>
+        let enter_1 = prompt("Nhập 1 chuỗi");
+            let str_1 = enter_1.split(" ");
+            let enter_2 = prompt("Nhập 1 chuỗi tiếp theo :");
+            let str_2 = enter_2.split(" ");
+            for (let i = 0; i < str_1.length; i++) {
+                for (let j = 0; j < str_2.length; j++) {
+                    if (str_1[i] === str_2[j] && str_1.length === str_2.length) {
+                        document.write("Hai chuỗi giống nhau");
+                        break;
+                    } else {
+                        document.write("Hai chuỗi không giống nhau");
+                        break;
+                    }
+                }
+            }
+    </script>
+</body>
+</html>

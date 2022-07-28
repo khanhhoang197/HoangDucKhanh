@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+<body>
+    <script>
+        let a = "-";
+            let keyword = "Chúng -ta của -hiện -tại -vẫn ế";
+            let str = keyword.split('');
+            for (let i = 0; i < str.length; i++) {
+                if (a.indexOf(str[i]) == 0) {
+                    str.splice(i, 1,"_");
+                }
+            }
+            document.write(str.join(''));
+    </script>
+</body>
+</html>
