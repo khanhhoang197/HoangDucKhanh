@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TÌM GIÁ TRỊ NHỎ NHẤT CỦA MẢNG</title>
+</head>
+<body>
+    <SCript>
+        let arr1 = [3, 5, 1, 8, -3, 7, 8],
+            arr2 = [7, 12, 6, 9, 20, 56, 89],
+            arr3 = [],
+            arr4 = [0, 0, 0, 0, 0, 0];
+            function minArray(arr){
+                let min = arr[0];
+                    for(var i = 1; i < arr.length; i++){
+                        if(arr[i] < min){
+                            min = arr[i];
+                        }
+                    }return min;
+                    function minArray(arr){
+                    
+                    if(arr.length == 0)
+                            return -1;
+                        let minarr3 = arr[0];
+
+                        for(let i = 1; i < arr.length; i++){
+                            if(arr[i] < minarr3){
+                                minarr3 = arr[i];
+                            }
+                        }
+                        return minarr3;
+                }
+                }
+         
+                let min = minArray(arr1);
+                alert('mảng 1 có giá trị nhỏ nhất là: '+ min);
+                min = minArray(arr2);
+                alert('mảng 2 có giá trị nhỏ nhất là: ' + min)
+                minarr3 = minArray(arr3);
+                alert('mảng 3 có giá trị nhỏ nhất là: ' + minarr3 );
+                min = minArray(arr4);
+                alert('mảng 4 có giá trị nhỏ nhất là: ' + min);
+        
+    </SCript>
+</body>
+</html>
