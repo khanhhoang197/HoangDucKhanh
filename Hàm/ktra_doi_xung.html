@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+    <br><br><br>
+    <!-- <input type="text" style="width: 200px" id="input">
+    <button onclick="main()">Kiểm tra</button><br><br>
+    <p><span id="result"></span></p>
+     -->
+    <script>
+        let str = prompt('nhập vào từ để kiểm tra');
+        function isPalindrome(str) {
+                rev = str.split('').reverse().join('');
+                if(rev == str){
+                    document.write( `${str} là đối xứng`);
+                }else{
+                    document.write( `${str} không đối xứng`);
+                    
+                }
+            }
+            isPalindrome(str);
+    </script>
+</body>
+</html>
