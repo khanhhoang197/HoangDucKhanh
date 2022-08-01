@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp hình tròn</title>
+</head>
+<body>
+    <script>
+        let circle = function(radius){
+            this.radius = radius;
+            
+            this.getRadius = function(){
+                return radius;
+            }
+            this.getArea = function(){
+                return Math.PI * radius * radius
+            }
+            this.getPrimeter = function(){
+                // 2PI *getRadius
+                let chuvi = 2 * Math.PI * this.getRadius();
+            }
+            this.compareCircle = function(circle1){
+                if(circle1.getRadius() < this.getRadius()){
+                    return true;
+                }
+                return false;
+            }
+        };
+        let c1 = new circle(5);
+        let c2 = new circle(10);
+        let radius = c1.getRadius();
+        let area = c1.getArea();  
+
+        document.write(`bán kính hình tròn là ${radius}, diện tích hình tròn là: ${area}`);
+
+    </script>
+</body>
+</html>
