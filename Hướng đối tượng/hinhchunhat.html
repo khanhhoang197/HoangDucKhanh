@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XÂY DỰNG LỚP MÔ TẢ HÌNH CHỮ NHẬT</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1368px" height="500px" style="border: 1px solid #d3d3d3;"></canvas>
+    <p><span id="result"></span></p>
+    <script>
+        function Rectangle(width, height){
+            this.width = width;
+            this.height = height;
+            this.getwidth = function(){
+                return width;
+            }
+            this.getheight = function(){
+                return height;
+            }
+            this.getprimeter = function(){
+                return (width + height) * 2;
+            }
+            this.getArea = function(){
+                return width * height;
+            }
+
+        }
+
+        function createRectangle(){
+            let ctx = document.getElementById('myCanvas').getContext('2d');
+            ctx.fillstyle = "#0000FF";
+            ctx.fillRect( 150, 150, width, height);
+        }
+        let rectangle = new Rectangle(400, 200);
+        let width = rectangle.getwidth();
+        let height = rectangle.getheight();
+        let area = rectangle.getArea();
+        let primeter = rectangle.getprimeter();
+        document.write( `diện tích của hình chữ nhật là: ${area}.<br> chu vi của hình chữ nhật là: ${primeter}`);
+        document.write(createRectangle());
+    </script>
+</body>
+</html>
