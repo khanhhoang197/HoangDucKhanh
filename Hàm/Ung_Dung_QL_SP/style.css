@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    width: 550px;
+    margin: 10px auto;
+    box-shadow: 3px 3px 3px rgb(41, 39, 39);
+}
+
+.tbJob{
+    width: 100%;
+}
+.tbJob, .tbJob tr, .tbJob td, .tbJob th{
+    border-collapse: collapse;
+    border:1px solid gray;
+
+}
+.tbJob>thead>tr{
+    background-color: grey;
+    color: white;
+}
+
+.tbJob th, .tbJob td{
+    padding: 5px 10px;
+}
+
+.tbJob>tbody>tr:hover{
+    background-color: rgb(199, 179, 179);
+    cursor: pointer;
+}
+.create-job{
+    margin-bottom: 5px;
+    display: flex;
+}
+.create-job input{
+    flex: 1;
+    padding: 7px 5px;
+}
+
+.btn{
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+.btn-primary{
+    background-color: green;
+    color: white;
+}
+
+.btn-warning{
+    background-color: yellow;
+}
+.btn-danger{
+    background-color: red;
+    color: white;
+}
+.d-none{
+    display: none;
+}
+
+.form-control{
+    padding: 7px 5px;
+}

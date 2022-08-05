@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job App</title>
+    <link rel="stylesheet" href="job.css">
+</head>
+<body>
+    <div class="container">
+        <div class="create-job">
+            <input onkeypress="pressEnter(event)" type="text" id="jobName" placeholder="Enter job name">
+            <button onclick="addJob()" class="btn btn-primary">Add</button>
+        </div>
+        <div class="list-job">
+            <table class="tbJob">
+                <thead>
+                    <tr>
+                        <th>#ID</th>
+                        <th>JobName</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="job.js"></script>
+</body>
+</html>
